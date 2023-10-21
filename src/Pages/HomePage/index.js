@@ -1,11 +1,14 @@
-import './App.css';
+import './index.css';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
+import '../../i18n';
+import { useTranslation,Trans } from 'react-i18next';
 
 
 function App() {
+  const {t,i18n} = useTranslation();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -69,7 +72,7 @@ function App() {
               <div className="topic-slide">
                 <a href="#">
                   <span className="topic-date">2022.06.21</span>
-                  <span className="topic-title">營收報告 / 季合併財報</span>
+                  <span className="topic-title">{t("IncomeRepo")}</span>
                 </a>
               </div>
               <div className="topic-nav">
@@ -89,8 +92,8 @@ function App() {
               <div className="title-img">
                 <img src="https://www.wowprime.com/templates/cadiis/images/ui/title-img.svg" alt="" />
               </div>
-              <p class="title01">王品集團因同仁而精彩，<br />有快樂的同仁，才會有滿意的顧客。</p>
-              <p>堅持以人為本，把同仁當成自己的家人一樣尊重、一樣重視、一樣重要，就像一個家庭中的每位成員皆舉足輕重，並產生認同與歸屬感。</p>
+              <p class="title01">{t("IntrodutionA")}<br />{t("IntrodutionB")}</p>
+              <p>{t("IntrodutionC")}</p>
             </div>
           </div>
           <div className="fullimg">
@@ -99,15 +102,15 @@ function App() {
         </div>
       </div>
 
-      {/* news-wrao */}
+      {/* news-wrap */}
       <div className="news-wrap">
         <div className="container">
           <ul className="nav-tabs">
             <li className="item">
-              <a href="#" className="nav-link active">集團訊息</a>
+              <a href="#" className="nav-link active">{t("NewsMsg")}</a>
             </li>
             <li className="item">
-              <a href="#" className="nav-link">媒體報導</a>
+              <a href="#" className="nav-link">{t("NewsMda")}</a>
             </li>
           </ul>
           <div className="tab-content">
@@ -117,28 +120,28 @@ function App() {
                 <span className='news-span'>
                   <img src="https://www.wowprime.com/images/kkcontent_thumbs/thumb_107_883_1694595842_230913_picnic00.jpg" alt="" />
                   <span className="date">2023/09/13</span>
-                  <span className="title">【野餐冒險王正式啟動】  探索王品國尋找價值破千寶藏</span>
+                  <span className="title">{t("NewsSlideA")}</span>
                 </span>
               </a>
               <a href="#">
                 <span className='news-span'>
                   <img src="https://www.wowprime.com/images/kkcontent_thumbs/thumb_107_884_1694669838_2023tb.png" alt="" />
                   <span className="date">2023/09/01</span>
-                  <span className="title">2023知書答禮｜淘氣接力趣</span>
+                  <span className="title">{t("NewsSlideB")}</span>
                 </span>
               </a>
               <a href="#">
                 <span className='news-span'>
                   <img src="https://www.wowprime.com/images/kkcontent_thumbs/thumb_107_839_1685703665_wowprime_banner_wp_site_650-650_b.jpg" alt="" />
                   <span className="date">2023/06/05</span>
-                  <span className="title">王品瘋美食330萬會員慶 【主揪站出來 冠名得大獎】</span>
+                  <span className="title">{t("NewsSlideC")}</span>
                 </span>
               </a>
               <a href="#">
                 <span className='news-span'>
                   <img src="https://www.wowprime.com/images/kkcontent_thumbs/thumb_107_828_1683602208_2023_102bn.jpg" alt="" />
                   <span className="date">2023/05/02</span>
-                  <span className="title">2023原燒｜一人衣愛助兒盟</span>
+                  <span className="title">{t("NewsSlideD")}</span>
                 </span>
               </a>
               
@@ -147,7 +150,7 @@ function App() {
             
           </div>
           <div className="more_articles">
-              <a href="#" className="red-btn">更多集團訊息</a>
+              <a href="#" className="red-btn">{t("NewsBtn")}</a>
           </div>
         </div>
       </div>
@@ -159,11 +162,11 @@ function App() {
             <div className="row">
               <div className="home-about-left">
                 <p className="title02">Investor</p>
-                <p className="title01">傳遞餐桌上的美味關係<br />成為最具影響力的餐飲集團</p>
-                <p>創造與提供顧客多元餐飲服務及產品</p>
-                <p>時刻傳遞溫度，豐富美好生活</p>
+                <p className="title01">{t("HomeAboutA")}<br />{t("HomeAboutB")}</p>
+                <p>{t("HomeAboutC")}</p>
+                <p>{t("HomeAboutD")}</p>
                 <p>&nbsp;</p>
-                <a href="#" className="red-btn">更多內容</a>
+                <a href="#" className="red-btn">{t("Btn")}</a>
               </div>
               <div className="home-about-right">
                 <table className="table-rwd">
@@ -172,34 +175,34 @@ function App() {
                       <td>
                         <div className="item">
                           <div className="counter">
-                            30<span>年</span>
+                            30<span>{t("HomeAboutListA")}</span>
                           </div>
                         </div>
-                        <p className="desc">成立於1993年</p>
+                        <p className="desc">{t("HomeAboutListA2")}</p>
                       </td>
                       <td>
                         <div className="item">
                           <div className="counter">
-                            323<span>間</span>
+                            323<span>{t("HomeAboutListB")}</span>
                           </div>
                         </div>
-                        <p className="desc">台灣直營</p>
+                        <p className="desc">{t("HomeAboutListB2")}</p>
                       </td>
                       <td>
                         <div className="item">
                           <div className="counter">
-                            99<span>間</span>
+                            99<span>{t("HomeAboutListC")}</span>
                           </div>
                         </div>
-                        <p className="desc">大陸直營</p>
+                        <p className="desc">{t("HomeAboutListC2")}</p>
                       </td>
                       <td>
                         <div className="item">
                           <div className="counter">
-                            36<span>個</span>
+                            36<span>{t("HomeAboutListD")}</span>
                           </div>
                         </div>
-                        <p className="desc">餐飲品牌</p>
+                        <p className="desc">{t("HomeAboutListD2")}</p>
                       </td>
                     </tr>
                   </tbody>
@@ -215,17 +218,17 @@ function App() {
         <div className="row">
           <div className="big-title">Human Resource</div>
           <div className="hr-intro">
-            <p className="title02">人才招募</p>
-            <p className="title01">夢想的起點 從王品出發</p>
+            <p className="title02">{t("HumanTitleA")}</p>
+            <p className="title01">{t("HumanTitleB")}</p>
             <ul className="list02">
-              <li>薪酬獎勵</li>
-              <li>歡慶節日</li>
-              <li>新鐵人養成計畫</li>
-              <li>安心保障</li>
-              <li>王品人專屬享樂</li>
-              <li>完整的教育訓練體系</li>
+              <li>{t("HumanListA")}</li>
+              <li>{t("HumanListB")}</li>
+              <li>{t("HumanListC")}</li>
+              <li>{t("HumanListD")}</li>
+              <li>{t("HumanListE")}</li>
+              <li>{t("HumanListF")}</li>
             </ul>
-            <a href="#" className="red-btn">更多內容</a>
+            <a href="#" className="red-btn">{t("Btn")}</a>
           </div>
           <div className="hr-img">
             <img src="https://www.wowprime.com/uploads/home/hr.jpg" alt="" />
@@ -235,8 +238,8 @@ function App() {
 
       {/* home-brands */}
       <div className="home-brands">
-        <div className="title">一起吃飯，就是最好的事</div>
-        <div className="sub-title">創造與提供顧客多元餐飲服務及產品，時刻傳遞溫度，豐富美好生活。</div>
+        <div className="title">{t("BrandA")}</div>
+        <div className="sub-title">{t("BrandB")}</div>
         <div className="home-brands-slide">
           <Slider {...settingsBrands}>
             <div className="wrap">
@@ -292,54 +295,54 @@ function App() {
             <div className="footer-right">
               <div className="row">
                 <div className="footer-col">
-                  <div className="moudle-header">關於王品</div>
+                  <div className="moudle-header">{t("FooterTitleA")}</div>
                   <ul className="footer-ul">
-                    <li><a href="#">企業概況與沿革</a></li>
-                    <li><a href="#">經營理念與核心價值觀</a></li>
-                    <li><a href="#">聯絡我們</a></li>
+                    <li><a href="#">{t("FooterListA1")}</a></li>
+                    <li><a href="#">{t("FooterListA2")}</a></li>
+                    <li><a href="#">{t("FooterListA3")}</a></li>
                   </ul>
                 </div>
                 <div className="footer-col">
-                  <div className="moudle-header">美味地圖</div>
+                  <div className="moudle-header">{t("FooterTitleB")}</div>
                   <ul className="footer-ul">
-                    <li><a href="#">品牌發展與版圖</a></li>
-                    <li><a href="#">紙本票券專區</a></li>
+                    <li><a href="#">{t("FooterListB1")}</a></li>
+                    <li><a href="#">{t("FooterListB2")}</a></li>
                   </ul>
                 </div>
                 <div className="footer-col">
-                  <div className="moudle-header">企業責任</div>
+                  <div className="moudle-header">{t("FooterTitleC")}</div>
                   <ul className="footer-ul">
-                    <li><a href="#">CSR管理</a></li>
-                    <li><a href="#">永續治理</a></li>
-                    <li><a href="#">綠色採購</a></li>
-                    <li><a href="#">安心食品</a></li>
-                    <li><a href="#">友善環境</a></li>
-                    <li><a href="#">幸福職場</a></li>
-                    <li><a href="#">社會共融</a></li>
-                    <li><a href="#">CSR報告</a></li>
+                    <li><a href="#">{t("FooterListC1")}</a></li>
+                    <li><a href="#">{t("FooterListC2")}</a></li>
+                    <li><a href="#">{t("FooterListC3")}</a></li>
+                    <li><a href="#">{t("FooterListC4")}</a></li>
+                    <li><a href="#">{t("FooterListC5")}</a></li>
+                    <li><a href="#">{t("FooterListC6")}</a></li>
+                    <li><a href="#">{t("FooterListC7")}</a></li>
+                    <li><a href="#">{t("FooterListC8")}</a></li>
                   </ul>
                 </div>
                 <div className="footer-col">
-                  <div className="moudle-header">利害關係人</div>
+                  <div className="moudle-header">{t("FooterTitleD")}</div>
                   <ul className="footer-ul">
-                    <li><a href="#">投資人專區</a></li>
-                    <li><a href="#">供應商平台</a></li>
-                    <li><a href="#">店鋪租賃處</a></li>
+                    <li><a href="#">{t("FooterListD1")}</a></li>
+                    <li><a href="#">{t("FooterListD2")}</a></li>
+                    <li><a href="#">{t("FooterListD3")}</a></li>
                   </ul>
                 </div>
                 <div className="footer-col">
-                  <div className="moudle-header">新聞中心</div>
+                  <div className="moudle-header">{t("FooterTitleE")}</div>
                   <ul className="footer-ul">
-                    <li><a href="#">各界肯定</a></li>
-                    <li><a href="#">媒體報導</a></li>
-                    <li><a href="#">集團訊息</a></li>
+                    <li><a href="#">{t("FooterListE1")}</a></li>
+                    <li><a href="#">{t("FooterListE2")}</a></li>
+                    <li><a href="#">{t("FooterListE3")}</a></li>
                   </ul>
                 </div>
                 <div className="footer-col">
-                  <div className="moudle-header">人工招募</div>
+                  <div className="moudle-header">{t("FooterTitleF")}</div>
                   <ul className="footer-ul">
-                    <li><a href="#">加入王品</a></li>
-                    <li><a href="#">同仁專區</a></li>
+                    <li><a href="#">{t("FooterListF1")}</a></li>
+                    <li><a href="#">{t("FooterListF2")}</a></li>
                   </ul>
                 </div>
               </div>
@@ -350,7 +353,7 @@ function App() {
           <div className="container">
             <div className="wrap">
               <p>
-                <a href="#" className="cookie">隱私權政策</a>
+                <a href="#" className="cookie">{t("Privacy")}</a>
               </p>
               <p>版權所有© Wowprime.Corp. All rights reserved.</p>
             </div>

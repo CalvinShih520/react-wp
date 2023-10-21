@@ -326,7 +326,7 @@ table{
     box-sizing: border-box;
 }
 .home-hr .big-title{
-    font-size: 70px;
+    font-size: 85px;
     color: #fff;
     font-weight: 500;
     height: 51%;
@@ -334,7 +334,7 @@ table{
     top: 0;
     left: 0%;
     z-index: 9;
-    padding-left: 4%;
+    padding-left: 3%;
     display: flex;
     align-items: flex-end;
     -webkit-box-flex: 0;
