@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import HomePage from './Pages/HomePage';
+import HomePage from './Pages/HomePage/HomePage';
 import About from './Pages/About';
 import Map from './Pages/Map';
 import Resbility from './Pages/Resbility';
@@ -12,10 +12,15 @@ import styled from 'styled-components';
 import './index.css';
 import "./i18n";
 import {useTranslation,Trans} from "react-i18next";
+import { UnorderedListOutlined } from '@ant-design/icons';
 
 
 const Router = () => {
     const {t,i18n} = useTranslation();
+    const [isMenuOpen, setMenuOpen] = useState(false);
+    const toggleMenu = () => {
+      setMenuOpen(!isMenuOpen);
+    };
     
     const [isLangListOpen, setLangListOpen] = useState(false);
 
@@ -37,6 +42,22 @@ const Router = () => {
                         <Link to='/react-wp' style={{textDecoration: 'none'}}><span>王品集團</span></Link>
                     </StyledLogo>
                     <StyledMainmenu>
+                      <button onClick={toggleMenu}  style={{ background: '#DE052E', color: 'white' }}>
+                        <UnorderedListOutlined />
+                      </button>
+                      {isMenuOpen ? (
+                        <div className="mobile-menu">
+                          {/* 在这里添加图标和链接 */}
+                          <ul className="link-block">
+                            <li><Link to="/react-wp/about">{t("AboutWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/map">{t("MapWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/resbility">{t("responsibilityWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/interested">{t("RelevantWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/newscenter">{t("NewsWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/recruiting">{t("recruitWowPrime")}</Link></li>
+                        </ul>
+                        </div>
+                      ) : (
                         <ul className="nav">
                             <li><Link to="/react-wp/about">{t("AboutWowPrime")}</Link></li>
                             <li><Link to="/react-wp/map">{t("MapWowPrime")}</Link></li>
@@ -45,19 +66,16 @@ const Router = () => {
                             <li><Link to="/react-wp/newscenter">{t("NewsWowPrime")}</Link></li>
                             <li><Link to="/react-wp/recruiting">{t("recruitWowPrime")}</Link></li>
                         </ul>
-                        {/* <div  style={{display: 'flex',justifyContent:'space-between',alignItems:'center'}}>
-                            <div>
-                                <Link to='/' style={{textDecoration: 'none'}}><div style={{cursor: 'pointer' , fontSize:20}} >王品集團wowprime</div></Link>
-                            </div>
-                            <div style={{display: 'flex',justifyContent:'space-around'}}>
-                                <Link to="/about" style={{textDecoration: 'none'}}><div style={{cursor: 'pointer' , fontSize:20,padding:25}} >關於王品</div></Link>
-                                <Link to="/map" style={{textDecoration: 'none'}}><div style={{cursor: 'pointer' , fontSize:20,padding:25}} >美食地圖</div></Link>
-                                <Link to="/resbility" style={{textDecoration: 'none'}}><div style={{cursor: 'pointer' , fontSize:20,padding:25}} >企業責任</div></Link>
-                                <Link to="/interested" style={{textDecoration: 'none'}}><div style={{cursor: 'pointer' , fontSize:20,padding:25}} >利害關係人</div></Link>
-                                <Link to="/newscenter" style={{textDecoration: 'none'}}><div style={{cursor: 'pointer' , fontSize:20,padding:25}} >新聞中心</div></Link>
-                                <Link to="/recruiting" style={{textDecoration: 'none'}}><div style={{cursor: 'pointer' , fontSize:20,padding:25}} >人才招募</div></Link>
-                            </div>
-                        </div>  */}
+                      )}
+
+                        {/* <ul className="nav">
+                            <li><Link to="/react-wp/about">{t("AboutWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/map">{t("MapWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/resbility">{t("responsibilityWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/interested">{t("RelevantWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/newscenter">{t("NewsWowPrime")}</Link></li>
+                            <li><Link to="/react-wp/recruiting">{t("recruitWowPrime")}</Link></li>
+                        </ul> */}
                     </StyledMainmenu>
                     <StyledLanguage>
                     <StyledLangChoose onClick={toggleLangList} />
@@ -193,13 +211,38 @@ const StyledMainmenu = styled.div`
             }
     }
   }
+  .mobile-menu,button {
+    display: none; /* 隐藏图标展开的内容，它将在小于1200px时显示 */
+  }
+  
+
+  @media (max-width: 1200px) {
+    font-size: 25px;
+    right: 0px;
+    top: 15px;
+    button {
+      display: block; /* 在小于1200px时显示按钮 */
+    }
+
+    .nav {
+      display: none; /* 在小于1200px时隐藏正常菜单 */
+    }
+
+    .mobile-menu {
+      display: block; /* 在小于1200px时显示图标展开的内容 */
+    }
+  }
 `
 
 const StyledLanguage = styled.div`
   position: absolute;
   right: 0;
-  top: 20px;
+  top: 22px;
   z-index: 99;
+
+  @media (max-width: 1200px) {
+    right: 30px;
+  }
 `
 
 const StyledLangChoose = styled.div`
@@ -217,6 +260,10 @@ const StyledSerchBtn = styled.div`
   position: absolute;
   right: 25px;
   top: 20px;
+
+  @media (max-width: 1200px) {
+    right: 55px;
+  }
 
 `
 
