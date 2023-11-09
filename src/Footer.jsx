@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ResetStyle, Container, Row, A } from '../../components/globalStyle';
+import { ResetStyle, Container, Row, A } from './components/globalStyle';
 import { useTranslation } from 'react-i18next';
 
 const Footer = styled.footer`
@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
   margin: 0 auto;
 `;
 
-const FooterLeft = styled.div`
+const Flex25 = styled.div`
   flex: 0 0 25%;
   max-width: 25%;
   position: relative;
@@ -31,7 +31,7 @@ const FooterLeft = styled.div`
   }
 `;
 
-const FooterRight = styled.div`
+const Flex75 = styled.div`
   flex: 0 0 75%;
   max-width: 75%;
   position: relative;
@@ -136,10 +136,10 @@ const StyledFooter = () => {
         <FooterContainer>
       <Container>
         <Row vertical alignCenter760>
-          <FooterLeft>
+          <Flex25>
             <FooterIMG src="https://www.wowprime.com/templates/cadiis/images/ui/logo-w.svg" alt="" />
-          </FooterLeft>
-          <FooterRight>
+          </Flex25>
+          <Flex75>
           <Row>
               <FooterCol>
                 <ModuleHeader>{t("FooterTitleA")}</ModuleHeader>
@@ -193,7 +193,7 @@ const StyledFooter = () => {
                 </FooterUl>
               </FooterCol>
               </Row>
-          </FooterRight>
+          </Flex75>
           </Row>
       </Container>
       </FooterContainer>

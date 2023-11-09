@@ -13,9 +13,10 @@ import './index.css';
 import "./i18n";
 import {useTranslation,Trans} from "react-i18next";
 import { UnorderedListOutlined } from '@ant-design/icons';
+import DropdownBottom from "./components/antd/Dropdown";
 
 
-const Router = () => {
+const Header = () => {
     const {t,i18n} = useTranslation();
     const [isMenuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
@@ -67,15 +68,6 @@ const Router = () => {
                             <li><Link to="/react-wp/recruiting">{t("recruitWowPrime")}</Link></li>
                         </ul>
                       )}
-
-                        {/* <ul className="nav">
-                            <li><Link to="/react-wp/about">{t("AboutWowPrime")}</Link></li>
-                            <li><Link to="/react-wp/map">{t("MapWowPrime")}</Link></li>
-                            <li><Link to="/react-wp/resbility">{t("responsibilityWowPrime")}</Link></li>
-                            <li><Link to="/react-wp/interested">{t("RelevantWowPrime")}</Link></li>
-                            <li><Link to="/react-wp/newscenter">{t("NewsWowPrime")}</Link></li>
-                            <li><Link to="/react-wp/recruiting">{t("recruitWowPrime")}</Link></li>
-                        </ul> */}
                     </StyledMainmenu>
                     <StyledLanguage>
                     <StyledLangChoose onClick={toggleLangList} />
@@ -277,4 +269,4 @@ const StyleLangList = styled.div`
   height: 20px;
 `
 
-export default Router;
+export default Header;
