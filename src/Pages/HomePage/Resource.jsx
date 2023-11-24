@@ -59,14 +59,14 @@ const HRIntro = styled.div`
     }
 `;
 
-const Title01 = styled.p`
+const SubTitle = styled.p`
     font-size: 35px;
     color: #000;
 
     
 `;
 
-const Title02 = styled.p`
+const Title = styled.p`
     font-weight: 700;
     margin-bottom: 10px;
     color: #de052e;
@@ -91,7 +91,7 @@ const HRIntroUL = styled.ul`
     }
 `;
 
-const List02LI = styled.li`
+const IntroLi = styled.li`
     background: url(https://www.wowprime.com/templates/cadiis/images/ui/people-li.png) no-repeat left 6px;
     background-size: 25px;
     padding: 10px 0 0 35px;
@@ -145,15 +145,15 @@ const HomeHRComponent = () => {
                 <Row>
                 <BigTitle>Human Resource</BigTitle>
                 <HRIntro>
-                    <Title02>{t("HumanTitleA")}</Title02>
-                    <Title01>{t("HumanTitleB")}</Title01>
+                    <Title>{t("HumanTitleA")}</Title>
+                    <SubTitle>{t("HumanTitleB")}</SubTitle>
                     <HRIntroUL>
-                        <List02LI>{t("HumanListA")}</List02LI>
-                        <List02LI>{t("HumanListB")}</List02LI>
-                        <List02LI>{t("HumanListC")}</List02LI>
-                        <List02LI>{t("HumanListD")}</List02LI>
-                        <List02LI>{t("HumanListE")}</List02LI>
-                        <List02LI>{t("HumanListF")}</List02LI>
+                        <IntroLi>{t("HumanListA")}</IntroLi>
+                        <IntroLi>{t("HumanListB")}</IntroLi>
+                        <IntroLi>{t("HumanListC")}</IntroLi>
+                        <IntroLi>{t("HumanListD")}</IntroLi>
+                        <IntroLi>{t("HumanListE")}</IntroLi>
+                        <IntroLi>{t("HumanListF")}</IntroLi>
                     </HRIntroUL>
                     <RedBtn href="#">{t("Btn")}</RedBtn>
                 </HRIntro>

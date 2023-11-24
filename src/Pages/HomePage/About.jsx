@@ -17,7 +17,7 @@ const HomeAboutContainer = styled.div`
   margin: 0 auto;
 `;
 
-const HomeAboutLeft = styled.div`
+const Flex33 = styled.div`
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
   width: 100%;
@@ -30,7 +30,7 @@ const HomeAboutLeft = styled.div`
   }
 `;
 
-const HomeAboutRight = styled.div`
+const Flex66 = styled.div`
   flex: 0 0 66.666666%;
   max-width: 66.666666%;
   width: 100%;
@@ -42,13 +42,13 @@ const HomeAboutRight = styled.div`
   }
 `;
 
-const Title02 = styled.p`
+const HomeAboutTitle = styled.p`
   color: #de052e;
   margin-bottom: 10px;
   font-weight: bold;
 `;
 
-const Title01 = styled.p`
+const HomeAboutSubtitle = styled.p`
   font-size: 35px;
   color: #000;
   padding-bottom: 25px;
@@ -128,21 +128,21 @@ const MyHomeAbout = () => {
                     <Container>
                         <Row alignCenter vertical>
 
-                                <HomeAboutLeft>
-                                    <Title02>Investor</Title02>
-                                    <Title01>
+                                <Flex33>
+                                    <HomeAboutTitle>Investor</HomeAboutTitle>
+                                    <HomeAboutSubtitle>
                                         {t("HomeAboutA")}
                                         <br />
                                         {t("HomeAboutB")}
-                                    </Title01>
+                                    </HomeAboutSubtitle>
                                     <Paragraph>{t("HomeAboutC")}</Paragraph>
                                     <Paragraph>{t("HomeAboutD")}</Paragraph>
                                     <Paragraph>&nbsp;</Paragraph>
                                     <RedButton href="#" className="red-btn">
                                         {t("Btn")}
                                     </RedButton>
-                                </HomeAboutLeft>
-                                <HomeAboutRight>
+                                </Flex33>
+                                <Flex66>
                                     <TableRWD>
                                         <tbody>
                                             <tr>
@@ -177,7 +177,7 @@ const MyHomeAbout = () => {
                                             </tr>
                                         </tbody>
                                     </TableRWD>
-                                </HomeAboutRight>
+                                </Flex66>
                       
                         </Row>
                     </Container>
