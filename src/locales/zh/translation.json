@@ -67,4 +67,60 @@
     "FooterListF1" : "加入王品",
     "FooterListF2" : "同仁專區",
     "Privacy" : "隱私權政策"
+    ,
+    "InterestedBannerTitle":"投資人專區",
+    "InterestedBannerSubTitle":"總覽",
+    "InterestedBodyTitle":"投資人專區",
+    "InterestedBodyTitleSpan":"民國112年10月營收請至「月營收資訊」項下查閱。",
+    "InterestedBodyUpdateP":"更新日期：2023.10.31",
+    "InterestedBodyPTitle1":"台灣直營店數",
+    "InterestedBodyPTitle2":"大陸直營店數",
+    "InterestedBodyPTitle3":"合計直營店數",
+    "InterestedBodyPTitle4":"股票代號",
+    "InterestedBodyListTitle1":"最新重大訊息",
+    "InterestedBodyListTitle2":"最新財務訊息",
+    "InterestedBodyListSubTitle1":"變更111年股東常會採電子方式行使表決權股東領取紀念品地點",
+    "InterestedBodyListSubTitle2":"公告本公司董事會決議變更110年股東常會召開日期及地點 (依金管會公告「因應疫情公開發行公司股東會延期召開相關 措施」辦理)",
+    "InterestedBodyListSubTitle3":"公告本公司會計主管異動",
+    "InterestedBodyListSubTitle4":"年度報表",
+    "InterestedBodyListSubTitle5":"Q2 合併財報",
+    "InterestedBodyListSubTitle6":"月營收資訊",
+    "InterestedBodyMore":"更多內容",
+    "InterestedSubmenuTitle1":"關於王品",
+    "InterestedSubmenuTitle2":"財務訊息",
+    "InterestedSubmenuTitle3":"股東訊息",
+    "InterestedSubmenuTitle1List1":"基本資料",
+    "InterestedSubmenuTitle1List2":"組織架構",
+    "InterestedSubmenuTitle1List3":"各品牌店數",
+    "InterestedSubmenuTitle1List4":"董事會",
+    "InterestedSubmenuTitle1List5":"內部稽核",
+    "InterestedSubmenuTitle1List6":"公司治理",
+    "InterestedSubmenuTitle2List1":"公司年報",
+    "InterestedSubmenuTitle2List2":"財務報告",
+    "InterestedSubmenuTitle2List3":"月營收資訊",
+    "InterestedSubmenuTitle3List1":"股東會",
+    "InterestedSubmenuTitle3List2":"股利資訊",
+    "InterestedSubmenuTitle3List3":"股價資訊",
+    "InterestedSubmenuTitle3List4":"法說會",
+    "InterestedSubmenuTitle3List5":"重大訊息",
+    "InterestedSubmenuTitle3List6":"問與答"
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
 }
