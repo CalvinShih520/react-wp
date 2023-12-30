@@ -1,7 +1,6 @@
 import React from 'react';
-// import './index.css';
 import styled from 'styled-components';
-import {ResetStyle, Container, Row} from '../../components/globalStyle';
+import { Container } from '../../components/globalStyle';
 import { useTranslation } from 'react-i18next'; 
 
 const HomeMarquee = styled.div`

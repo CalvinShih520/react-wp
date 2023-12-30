@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ResetStyle, Container, Row } from '../../components/globalStyle';
+import { Container } from '../../components/globalStyle';
 
 const Desc = styled.div`
     padding: 100px 0 80px 0;

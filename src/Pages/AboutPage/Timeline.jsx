@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ResetStyle, Container, Row } from '../../components/globalStyle';
 import { ClockCircleOutlined } from '@ant-design/icons';
 import { Timeline } from 'antd';
 

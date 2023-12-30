@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ResetStyle, Container, Row, A } from '../globalStyle';
+import { ResetStyle, Container, Row} from '../globalStyle';
 import { useTranslation } from 'react-i18next';
 
 const Footer = styled.footer`

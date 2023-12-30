@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ResetStyle, Container, Row, A } from '../../components/globalStyle';
+import { ResetStyle } from '../../components/globalStyle';
 import Slider from 'react-slick';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';

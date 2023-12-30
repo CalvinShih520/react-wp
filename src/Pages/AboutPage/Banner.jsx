@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ResetStyle, Container, Row } from '../../components/globalStyle';
 
 const Wrap = styled.div`
     padding-top: 80px;

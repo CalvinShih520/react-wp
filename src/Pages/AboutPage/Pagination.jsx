@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ResetStyle, Container, Row } from '../../components/globalStyle';
 import { Pagination } from 'antd';
 
 const Wrap = styled.div`

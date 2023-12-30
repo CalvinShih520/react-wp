@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {ResetStyle, Container, Row} from '../../components/globalStyle';
+import {ResetStyle, Row} from '../../components/globalStyle';
 import { useTranslation } from 'react-i18next';
 
 const IntrodutionSlide = styled.div`

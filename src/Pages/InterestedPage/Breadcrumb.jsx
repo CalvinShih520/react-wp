@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ResetStyle, Container, Row } from '../../components/globalStyle';
+import {  Container } from '../../components/globalStyle';
 import { Breadcrumb } from 'antd';
 
 const BreadcrumbsWrap =styled.div`
