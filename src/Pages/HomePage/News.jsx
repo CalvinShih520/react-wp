@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components';
-import { ResetStyle, Container, Row ,A} from '../../components/globalStyle';
+import { ResetStyle, Container ,A} from '../../components/globalStyle';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';
 
